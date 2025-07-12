@@ -238,6 +238,7 @@ h2::after {
     gap: 2rem;
 }
 
+/* Image Section */
 .about-img {
     display: flex;
     justify-content: center;
@@ -248,11 +249,12 @@ h2::after {
     width: 100%;
     max-width: 300px;
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     aspect-ratio: 1/1;
     object-fit: cover;
 }
 
+/* Badge Styling */
 .img-badge {
     position: absolute;
     bottom: -15px;
@@ -264,7 +266,7 @@ h2::after {
     border-radius: 5px;
     display: flex;
     align-items: center;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
     width: max-content;
 }
 
@@ -273,22 +275,29 @@ h2::after {
     margin-right: 0.5rem;
 }
 
+/* About Text */
 .about-text {
     text-align: center;
 }
 
-.about-highlights {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
+/* Highlights Section */
+.about-highlights,
+.highlights-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
     margin-top: 2rem;
 }
 
+/* Individual Highlight Card */
 .highlight-card {
+    flex: 1 1 30%;
+   
     background: white;
     padding: 1.2rem;
     border-radius: 8px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: transform 0.3s;
 }
@@ -308,10 +317,14 @@ h2::after {
     font-size: 1.1rem;
 }
 
+}
+
 /* Family Section - Mobile */
+
+/* Family Section - Mobile First */
 .family-container {
-    background: white;
-    padding: 1.5rem;
+    background: whitesmoke;
+    padding: 2rem 1rem;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
@@ -321,24 +334,62 @@ h2::after {
     text-align: center;
 }
 
-.family-gallery {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
+/* Container for the image cards */
+.family-members {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
 }
 
+/* Each individual card */
+.family-member-card {
+    width: 100%;
+    max-width: 320px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+/* Image styling */
 .gallery-item {
-    height: 200px;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
     background-size: cover;
     background-position: center;
-    border-radius: 8px;
-    position: relative;
-    overflow: hidden;
+    border-radius: 8px 8px 0 0;
     transition: transform 0.3s;
 }
 
 .gallery-item:hover {
     transform: scale(1.02);
+}
+
+/* Responsive adjustments for larger devices */
+@media (min-width: 600px) {
+    .family-members {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .family-member-card {
+        flex: 1 1 45%;
+    }
+}
+
+@media (min-width: 900px) {
+    .family-member-card {
+        flex: 1 1 30%;
+    }
+
+    .family-container {
+        padding: 3.5rem;
+    }
 }
 
 /* Education Section - Mobile */
@@ -362,7 +413,6 @@ h2::after {
 }
 
 .school-card img {
-    width: 100%;
     height: 180px;
     object-fit: cover;
 }
@@ -395,103 +445,124 @@ h2::after {
     background: var(--ug-black);
 }
 
-.academic-qualifications {
-    background: white;
-    padding: 1.5rem;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    margin-top: 2rem;
+/* Container for both academic and politics sections */
+.dual-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 2rem 0;
 }
 
-.academic-qualifications h3 {
-    color: var(--primary);
-    margin-bottom: 1rem;
-    font-size: 1.2rem;
+/* Academic Qualifications Card */
+.qualifications-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+
 }
 
-.academic-qualifications ul {
-    list-style-type: none;
+.qualifications-card h3 {
+  color: var(--primary);
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
 }
 
-.academic-qualifications li {
-    padding: 0.7rem 0;
-    border-bottom: 1px solid #eee;
-    position: relative;
-    padding-left: 1.8rem;
-    font-size: 0.95rem;
+.qualifications-list {
+  list-style-type: none;
+  padding-left: 0;
 }
 
-.academic-qualifications li::before {
-    content: '✓';
-    color: var(--primary);
-    position: absolute;
-    left: 0;
-    font-weight: bold;
+.qualification-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1rem;
 }
 
-/* Politics Section - Mobile */
-.politics-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
+.degree-icon {
+  margin-right: 0.8rem;
+  font-size: 1.2rem;
+  color: var(--primary);
+  flex-shrink: 0;
 }
 
-.political-bio {
-    background: white;
-    padding: 1.5rem;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+.degree-info h4 {
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
 }
 
-.political-achievements {
-    margin-top: 1.5rem;
+.degree-info p {
+  font-size: 0.9rem;
+  color: #555;
 }
 
-.political-achievements li {
-    margin-bottom: 0.7rem;
-    position: relative;
-    padding-left: 1.5rem;
-    font-size: 0.95rem;
+/* Politics Section Card */
+.bio-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  
 }
 
-.political-achievements li::before {
-    content: '•';
-    color: var(--primary);
-    position: absolute;
-    left: 0;
-    font-size: 1.5rem;
-    line-height: 1;
+.bio-card h3 {
+  color: var(--primary);
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
 }
 
-.political-vision {
-    background: var(--primary);
-    color: white;
-    padding: 1.5rem;
-    border-radius: 10px;
+.position-details p {
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #444;
 }
 
-.btn-download {
-    display: inline-flex;
-    align-items: center;
-    margin-top: 1.2rem;
-    padding: 0.7rem 1.2rem;
-    background: white;
-    color: var(--primary);
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: all 0.3s;
-    font-size: 0.95rem;
+.achievements-card {
+  margin-top: 1.5rem;
 }
 
-.btn-download:hover, .btn-download:focus {
-    background: var(--ug-black);
-    color: white;
+.achievements-card h4 {
+  margin-bottom: 0.8rem;
+  font-size: 1.05rem;
+  color: var(--primary);
 }
 
-.btn-download i {
-    margin-right: 0.5rem;
+.achievements-list {
+  list-style: none;
+  padding-left: 0;
 }
+
+.achievements-list li {
+  margin-bottom: 0.7rem;
+  position: relative;
+  padding-left: 1.5rem;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.achievements-list li i {
+  position: absolute;
+  left: 0;
+  color: var(--primary);
+  font-size: 1rem;
+}
+
+/* Responsive layout - show side by side on tablet and up */
+@media (min-width: 768px) {
+  .dual-section {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .qualifications-card,
+  .bio-card {
+    flex: 1 1 48%;
+  }
+}
+
 
 /* Community Section - Mobile */
 .initiatives-container {
