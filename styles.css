@@ -127,10 +127,10 @@ height: 100vh;
     cursor: pointer;
 }
 
-/* Hero Section - Mobile */
+/* Hero Section - Mobile Without Gradient */
 .hero {
     min-height: 100vh;
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/uganda-bg.jpg');
+    background: url('/familys2.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -206,6 +206,7 @@ height: 100vh;
     background: white;
     color: var(--dark);
 }
+
 
 /* Section Styling - Mobile */
 section {
@@ -317,7 +318,7 @@ h2::after {
     font-size: 1.1rem;
 }
 
-}
+
 
 /* Family Section - Mobile */
 

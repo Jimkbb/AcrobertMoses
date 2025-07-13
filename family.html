@@ -5,10 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Our Family</title>
   <link rel="stylesheet" href="family.css" />
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js"></script> <!-- Fixed: script.js must be script, not stylesheet -->
 </head>
+
 <body>
 
    <header>
@@ -21,13 +22,13 @@
                 <i class="fas fa-bars"></i>
             </button>
             <ul class="nav-menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="/family.html">Family</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#politics">Politics</a></li>
-                <li><a href="#community">Community</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="family.html">Family</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="politics.html">Politics</a></li>
+                <li><a href="community.html">Community</a></li>
+                <li><a href="contact.html">Contact</a></li>
                 <button class="close-btn" aria-label="Close menu">
                     <i class="fas fa-times"></i>
                 </button>
@@ -35,33 +36,51 @@
         </nav>
     </header>
 
-  <section class="family-members">
-    <div class="member">
-      <img src="https://via.placeholder.com/150" alt="John Smith">
-      <h2>John Smith</h2>
-      <p>Father – Loves hiking and woodworking.</p>
-    </div>
+    <!-- ✅ Hero Section -->
+   <section class="hero" style="background: url('familys2.jpg') center center / cover no-repeat; min-height: 100vh;">
+    <h1>Welcome to Our Family</h1> <br>
+    <h4>Rooted in love, growing in strength, united in purpose.</h4>
+</section>
 
-    <div class="member">
-      <img src="https://via.placeholder.com/150" alt="Jane Smith">
-      <h2>Jane Smith</h2>
-      <p>Mother – Enjoys painting and gardening.</p>
-    </div>
 
-    <div class="member">
-      <img src="https://via.placeholder.com/150" alt="Emily Smith">
-      <h2>Emily Smith</h2>
-      <p>Daughter – Avid reader and soccer player.</p>
-    </div>
 
-    <div class="member">
-      <img src="https://via.placeholder.com/150" alt="Michael Smith">
-      <h2>Michael Smith</h2>
-      <p>Son – Gamer and aspiring chef.</p>
-    </div>
-  </section>
+    <section class="family-members">
+        <div class="member">
+            <img src="hon1.png" alt="Kiiza Moses">
+            <h2>Acrobert Kiiza Moses</h2>
+            <p>Father – Loves politics and woodworking.</p>
+        </div>
 
-  <footer>
+        <div class="member">
+            <img src="judith.jpg" alt="Judith kiiza">
+            <h2>Judith Kiiza</h2>
+            <p>Mother – Enjoys painting and gardening.</p>
+        </div>
+        <div class="member">
+            <img src="joackim.jpg" alt="Joackim Mumbere">
+            <h2>Joackim Mumbere</h2>
+            <p>Son – A secondary teacher of Math and ICT.</p>
+        </div>
+        <div class="member">
+            <img src="joshua.jpg" alt="Joshua Bukenya">
+            <h2>Joshua Bukenya</h2>
+            <p>Son – A secondary teacher of Math and ICT.</p>
+        </div>
+
+        <div class="member">
+            <img src="jim.jpg" alt="Jim Bwambale">
+            <h2>Jim Bwambale</h2>
+            <p>Son – An Electronics and Communication systems Engineer.</p>
+        </div>
+
+        <div class="member">
+            <img src="joset.jpg" alt="Michael Smith">
+            <h2>Joset Muhindo</h2>
+            <p>Daughter – Lawyer.</p>
+        </div>
+    </section>
+
+    <footer>
         <div class="footer-content">
             <div class="footer-card">
                 <div class="footer-logo">
@@ -70,7 +89,7 @@
                 </div>
                 <p class="footer-motto">"Building Uganda Through Education and Service"</p>
             </div>
-            
+
             <div class="footer-links-card">
                 <h4>Quick Links</h4>
                 <div class="footer-links">
@@ -80,7 +99,7 @@
                     <a href="#contact">Contact</a>
                 </div>
             </div>
-            
+
             <div class="footer-legal-card">
                 <p>&copy; 2023 Hon. Acrobert Kiiza Moses. All rights reserved.</p>
                 <p class="ugandan-pride">Proudly Ugandan</p>

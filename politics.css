@@ -12,22 +12,12 @@ body {
   line-height: 1.6;
 }
 
+
 a {
   color: #1a73e8;
   text-decoration: none;
 }
 
-/* Header */
-.hero {
-  background-color: #003366;
-  color: white;
-  text-align: center;
-  padding: 3rem 1rem;
-}
-
-.hero h1 {
-  font-size: 2.8rem;
-}
 
 /* About Section */
 .about {
