@@ -130,7 +130,7 @@ height: 100vh;
 /* Hero Section - Mobile Without Gradient */
 .hero {
     min-height: 100vh;
-    background: url('/familys2.jpg');
+    background: url('/familys2.jpgw');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -563,6 +563,26 @@ h2::after {
     flex: 1 1 48%;
   }
 }
+.vision-card{
+    background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+
+}
+
+.vision-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.vision-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+ 
+}
+
 
 
 /* Community Section - Mobile */

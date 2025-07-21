@@ -92,8 +92,8 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Dynamic content loading for political achievements
     const achievements = [
-        "Led education reform initiative benefiting 50 schools",
-        "Secured funding for clean water projects in 10 villages",
+        "Led education reform initiative benefiting 3 schools",
+        "Secured funding for clean water projects in villages",
         "Established youth entrepreneurship program",
         "Advocated for women's rights legislation"
     ];
@@ -110,18 +110,18 @@ document.addEventListener('DOMContentLoaded', function() {
     // School data - could be fetched from an API in a real implementation
     const schools = [
         {
-            name: "Hope Academy",
-            location: "Kampala",
-            founded: 2010,
-            students: 1200,
-            staff: 85,
-            image: "images/hope-academy.jpg"
+            name: "Nyahuka parents ss",
+            location: "Bundibugyo",
+            founded: 2001,
+            students: 800,
+            staff: 65,
+            image: "npss.jpg"
         },
         {
-            name: "Future Leaders School",
+            name: "Parental care primary schools",
             location: "Wakiso",
-            founded: 2015,
-            students: 800,
+            founded: 2008,
+            students: 400,
             staff: 45,
             image: "images/future-leaders.jpg"
         }
