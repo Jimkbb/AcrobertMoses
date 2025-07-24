@@ -1,29 +1,59 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Mobile menu functionality
+    // Improved Mobile Menu Functionality
     const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
     const navMenu = document.querySelector('.nav-menu');
     const closeBtn = document.querySelector('.close-btn');
     
-    // Toggle mobile menu
-    mobileMenuBtn.addEventListener('click', function() {
-        navMenu.classList.add('show');
-        document.body.style.overflow = 'hidden';
+    // Better menu toggle function
+    function toggleMenu(show) {
+        if (typeof show === 'boolean') {
+            navMenu.classList.toggle('show', show);
+        } else {
+            navMenu.classList.toggle('show');
+        }
+        
+        // Toggle body overflow and aria-expanded state
+        document.body.style.overflow = navMenu.classList.contains('show') ? 'hidden' : '';
+        mobileMenuBtn.setAttribute('aria-expanded', navMenu.classList.contains('show'));
+    }
+    
+    // Menu button click handler
+    mobileMenuBtn.addEventListener('click', function(e) {
+        e.stopPropagation(); // Prevent event bubbling
+        toggleMenu();
     });
     
-    // Close mobile menu
-    closeBtn.addEventListener('click', function() {
-        navMenu.classList.remove('show');
-        document.body.style.overflow = '';
+    // Close button click handler
+    closeBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        toggleMenu(false);
     });
     
     // Close menu when clicking on a link
     document.querySelectorAll('.nav-menu li a').forEach(link => {
-        link.addEventListener('click', function() {
-            navMenu.classList.remove('show');
-            document.body.style.overflow = '';
+        link.addEventListener('click', function(e) {
+            // Only close if menu is open
+            if (navMenu.classList.contains('show')) {
+                toggleMenu(false);
+            }
         });
     });
     
+    // Close menu when clicking outside
+    document.addEventListener('click', function(e) {
+        if (navMenu.classList.contains('show') && 
+            !navMenu.contains(e.target) && 
+            e.target !== mobileMenuBtn) {
+            toggleMenu(false);
+        }
+    });
+    
+    // Prevent clicks inside menu from closing it
+    navMenu.addEventListener('click', function(e) {
+        e.stopPropagation();
+    });
+
+    // Rest of your existing code remains the same...
     // Smooth scrolling for navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
