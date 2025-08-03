@@ -209,7 +209,7 @@ nav {
 
 /* Section Styling - Mobile */
 section {
-    padding: 3rem 1.5rem;
+    padding: 1.5rem 1.5rem;
     max-width: 1400px;
     margin: 0 auto;
 }
@@ -543,29 +543,85 @@ h2::after {
     color: #555;
 }
 
-/* Politics Section Card */
+/* Political Engagement Card - Mobile Version */
 .bio-card {
     background: white;
-    padding: 1.5rem;
+    padding: 1.2rem;
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    margin: 1rem 0;
+    width: 100%;
 }
 
 .bio-card h3 {
-    color: var(--primary);
-    margin-bottom: 1rem;
-    font-size: 1.2rem;
+    color: #D90000;
+    margin-bottom: 1.2rem;
+    font-size: 1.3rem;
+    text-align: center;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #FCDC04;
+}
+
+.position-group {
+    margin-bottom: 1.2rem;
+    background: #f9f9f9;
+    padding: 0.8rem;
+    border-radius: 6px;
+    border-left: 3px solid #D90000;
+}
+
+.position-category {
+    color: #333;
+    margin-bottom: 0.6rem;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+}
+
+.position-category i {
+    margin-right: 0.5rem;
+    color: #D90000;
+    font-size: 0.9rem;
+}
+
+.position-details {
+    padding-left: 1rem;
 }
 
 .position-details p {
-    font-size: 0.95rem;
-    margin-bottom: 0.5rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
+    margin-bottom: 0.6rem;
+    font-size: 0.9rem;
     color: #444;
+    display: flex;
+    align-items: flex-start;
+    line-height: 1.4;
 }
 
+.position-details i {
+    color: #D90000;
+    min-width: 20px;
+    text-align: center;
+    font-size: 0.8rem;
+    margin-top: 0.1rem;
+}
+
+/* Responsive adjustments for slightly larger mobile screens */
+@media (min-width: 400px) {
+    .bio-card {
+        padding: 1.3rem;
+    }
+    
+    .position-group {
+        padding: 1rem;
+    }
+    
+    .bio-card h3 {
+        font-size: 1.35rem;
+    }
+}
+
+/* Tablet and desktop styles remain separate in media queries */s
 .achievements-card {
     margin-top: 1.5rem;
 }
@@ -881,6 +937,7 @@ h2::after {
     display: flex;
     flex-direction: column;
     gap: 0.8rem;
+    color: #f9f9f9;
 }
 
 .contact-item {

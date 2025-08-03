@@ -1,0 +1,19 @@
+img[alt="My Portrait"] {
+  max-width: 100%;
+  height: auto;
+  display: block;       /* Makes margin auto work for horizontal centering */
+  margin-left: auto;    /* These two auto margins will center the image */
+  margin-right: auto;
+}
+
+@media (max-width: 767px) {
+  img[alt="My Portrait"] {
+    max-width: 80%;
+    /* No need to repeat centering properties - they'll inherit */
+  }
+  
+  img[alt="My Portrait"] + p {
+    font-size: 14px;
+    text-align: center; /* Also center the paragraph text if desired */
+  }
+}
