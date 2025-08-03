@@ -17,12 +17,12 @@ html, body {
 }
 
 /* Family Members Section - Mobile */
-.family-members {
+.family-member{
   display: flex;
  
-  align-items: center;
   padding: 1rem;
   gap: 1rem;
+  flex-wrap: wrap;
 }
 
 /* Mobile-friendly Card */
@@ -33,7 +33,7 @@ html, body {
   width: 90%;
   max-width: 320px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  text-align: center;
+  
   transition: transform 0.2s;
 }
 

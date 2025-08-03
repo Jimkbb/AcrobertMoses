@@ -322,33 +322,109 @@ h2::after {
     padding: 2rem 1rem;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin: 2rem auto;
+    max-width: 1400px;
 }
 
 .family-intro {
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
     text-align: center;
+}
+
+.family-intro h2 {
+    margin-bottom: 1rem;
 }
 
 /* Container for the image cards */
 .family-members {
-    display: flex;
-    
-    gap: 2.5rem;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    justify-content: center;
+    padding: 0 1rem;
 }
 
 /* Each individual card */
 .family-member-card {
     width: 100%;
-    max-width: 320px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    overflow: hidden;
     background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    text-align: center;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
+.family-member-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.family-member-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-bottom: 3px solid var(--primary);
+}
+
+.family-member-content {
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.family-member-name {
+    font-size: 1.3rem;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}
+
+.family-member-relation {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.family-member-bio {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+/* Responsive adjustments */
+@media (min-width: 576px) {
+    .family-members {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 768px) {
+    .family-members {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+    
+    .family-member-card {
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 992px) {
+    .family-members {
+        gap: 2.5rem;
+        padding: 0;
+    }
+    
+    .family-member-img {
+        height: 280px;
+    }
+}
 /* Image styling */
 .gallery-item {
     width: 100%;
