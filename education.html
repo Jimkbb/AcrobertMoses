@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="script.js">
+    <link rel="stylesheet" href="educationhero.css">
+    
 </head>
 
 <body>
@@ -40,13 +42,547 @@
     </header>
 
     <!-- Hero Section -->
-    
-        <section class="hero" style="background: url('familys2.jpg') center center / cover no-repeat; min-height: 100vh;">
-            <h1>Welcome to Our Family</h1>
-            <br>
-            <h4>Rooted in love, growing in strength, united in purpose.</h4>
+    check on educationhero page
+        <section class="hero">
+        <div class="hero-content">
+            <div class="profile-image">
+                <i class="fas fa-graduation-cap"></i>
+            </div>
+            <h1>HON. KIIZA ACROBERT MOSES</h1>
+            <div class="title">Member of Parliament, Bughendera Constituency</div>
+            <div class="quote">"Education is the foundation upon which we build our future"</div>
+            
+            <div class="stats">
+                <div class="stat-item">
+                    <i class="fas fa-book-open"></i>
+                    <div class="stat-number">7</div>
+                    <div class="stat-label">Degrees & Certificates</div>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-clock"></i>
+                    <div class="stat-number">25+</div>
+                    <div class="stat-label">Years in Education</div>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-users"></i>
+                    <div class="stat-number">1000+</div>
+                    <div class="stat-label">Students Impacted</div>
+                </div>
+            </div>
+            
+            <div class="cta-buttons">
+                <a href="education.html" class="btn btn-primary">
+                    <i class="fas fa-graduation-cap"></i> View Education History
+                </a>
+                <a href="community.html" class="btn btn-secondary">
+                    <i class="fas fa-handshake"></i> Support Education Initiatives
+                </a>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <script>
+        // Simple animation for the scroll indicator
+        document.addEventListener('DOMContentLoaded', function() {
+            const scrollIndicator = document.querySelector('.scroll-indicator');
+            
+            scrollIndicator.addEventListener('click', function() {
+                window.scrollTo({
+                    top: window.innerHeight,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+    <!--The body with the css inclusive-->
+   <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hon. Kiiza Acrobert Moses - Education</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Mobile-First Base Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(to bottom, #f0f9f0, #e6f4e6);
+            padding: 0;
+            font-size: 16px;
+        }
+
+        .container {
+            width: 100%;
+            padding: 15px;
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
+        /* Header Section */
+        .politician-header {
+            text-align: center;
+            padding: 20px 15px;
+            background: linear-gradient(135deg, #006600 0%, #009900 100%);
+            color: white;
+            border-radius: 0 0 15px 15px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 12px rgba(0, 80, 0, 0.2);
+        }
+
+        .politician-header h1 {
+            font-size: 1.8rem;
+            margin-bottom: 5px;
+            font-weight: 700;
+        }
+
+        .politician-header .title {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: 10px;
+        }
+
+        .politician-header .quote {
+            font-style: italic;
+            margin-top: 10px;
+            font-size: 0.95rem;
+            opacity: 0.85;
+        }
+
+        /* Hero Section */
+        .education-hero {
+            background: linear-gradient(135deg, #006600 0%, #009900 100%);
+            color: white;
+            padding: 25px 15px;
+            text-align: center;
+            margin-bottom: 25px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .education-hero h2 {
+            font-size: 1.6rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .education-hero p {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        /* Timeline Section - Mobile Vertical Layout */
+        .education-timeline {
+            position: relative;
+            width: 100%;
+            margin: 0 auto 30px;
+            padding: 10px 0 0;
+        }
+
+        .education-timeline::before {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background-color: #006600;
+            top: 0;
+            bottom: 0;
+            left: 15px;
+            margin-left: 0;
+        }
+
+        .timeline-item {
+            padding: 0 0 0 40px;
+            position: relative;
+            width: 100%;
+            margin-bottom: 25px;
+        }
+
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: white;
+            border: 4px solid #006600;
+            border-radius: 50%;
+            top: 15px;
+            left: 6px;
+            z-index: 2;
+        }
+
+        .timeline-content {
+            padding: 20px;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+            position: relative;
+        }
+
+        .timeline-content h3 {
+            color: #006600;
+            margin-top: 0;
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+        }
+
+        .timeline-content p {
+            margin-bottom: 0;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .timeline-year {
+            font-weight: bold;
+            color: #006600;
+            margin-bottom: 10px;
+            display: inline-block;
+            background-color: rgba(0, 102, 0, 0.1);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        .degree-badge {
+            position: absolute;
+            top: -10px;
+            right: 15px;
+            background: #ff9900;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        /* Short Courses Section */
+        .short-courses {
+            background-color: white;
+            padding: 25px 15px;
+            margin-bottom: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        .short-courses h2 {
+            color: #006600;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e0f0e0;
+        }
+
+        .course-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .course-card {
+            background: linear-gradient(to right, #f5fbf5, #f0f9f0);
+            padding: 18px;
+            border-radius: 10px;
+            border-left: 4px solid #006600;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .course-card h3 {
+            margin-top: 0;
+            color: #006600;
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+        }
+
+        .course-card p {
+            font-size: 0.9rem;
+            margin-bottom: 5px;
+        }
+
+        .course-card strong {
+            font-weight: 600;
+            color: #444;
+        }
+
+        /* Footer Section */
+        .education-footer {
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(135deg, #006600 0%, #009900 100%);
+            color: white;
+            border-radius: 15px 15px 0 0;
+            margin-top: 20px;
+        }
+
+        .education-footer p {
+            margin: 5px 0;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Adjustments for Tablets */
+        @media screen and (min-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+
+            .politician-header h1 {
+                font-size: 2.2rem;
+            }
+
+            .politician-header .title {
+                font-size: 1.2rem;
+            }
+
+            .education-hero {
+                padding: 30px 20px;
+            }
+
+            .education-hero h2 {
+                font-size: 1.9rem;
+            }
+
+            .education-hero p {
+                font-size: 1.1rem;
+            }
+
+            .course-grid {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+        }
+
+        /* Responsive Adjustments for Desktop */
+        @media screen and (min-width: 900px) {
+            .container {
+                max-width: 1000px;
+                margin: 0 auto;
+                padding: 30px 20px;
+            }
+
+            .education-timeline::before {
+                left: 50%;
+                margin-left: -2px;
+            }
+
+            .timeline-item {
+                padding: 10px 40px;
+                width: 50%;
+                margin-bottom: 30px;
+            }
+
+            .timeline-item::after {
+                width: 22px;
+                height: 22px;
+                top: 20px;
+            }
+
+            .timeline-item:nth-child(odd) {
+                left: 0;
+            }
+
+            .timeline-item:nth-child(even) {
+                left: 50%;
+            }
+
+            .timeline-item:nth-child(odd)::after {
+                right: -11px;
+                left: auto;
+            }
+
+            .timeline-item:nth-child(even)::after {
+                left: -11px;
+            }
+
+            .course-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .timeline-content {
+                padding: 25px;
+            }
+        }
+
+        /* Animation for timeline items */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .timeline-item {
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        .timeline-item:nth-child(1) { animation-delay: 0.1s; }
+        .timeline-item:nth-child(2) { animation-delay: 0.2s; }
+        .timeline-item:nth-child(3) { animation-delay: 0.3s; }
+        .timeline-item:nth-child(4) { animation-delay: 0.4s; }
+        .timeline-item:nth-child(5) { animation-delay: 0.5s; }
+        .timeline-item:nth-child(6) { animation-delay: 0.6s; }
+        .timeline-item:nth-child(7) { animation-delay: 0.7s; }
+
+        /* Add some spacing for better mobile experience */
+        .spacer {
+            height: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+       
+
+        <!-- Hero Section -->
+        <section class="education-hero">
+            <h2>Education Background</h2>
+            <p>Academic journey and commitment to lifelong learning</p>
         </section>
-    
+
+        <!-- Timeline Section -->
+        <section class="education-timeline">
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <span class="timeline-year">2022 - 2024</span>
+                    <div class="degree-badge">MASTERS</div>
+                    <h3>Metropolitan University</h3>
+                    <p>Master's Degree in Monitoring and Evaluation<br>
+                    Specialized in program assessment and data-driven policy development</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <span class="timeline-year">2006 - 2009</span>
+                    <div class="degree-badge">BACHELORS</div>
+                    <h3>Uganda Christian University</h3>
+                    <p>Bachelor's Degree<br>
+                    Significant achievement: Chairman of a discussion group CLAD program<br>
+                    General Secretary of Bundibugyo-Kasese Students Association</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <span class="timeline-year">1999 - 2002</span>
+                    <div class="degree-badge">DIPLOMA</div>
+                    <h3>Itek</h3>
+                    <p>Diploma in Education<br>
+                    Specialized in teacher training and education methodology</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <span class="timeline-year">2002 - 2003</span>
+                    <div class="degree-badge">UACE</div>
+                    <h3>St. Mary's Simbya S.S</h3>
+                    <p>Uganda Advanced Certificate of Education (UACE)<br>
+                    Advanced level studies preparing for university education</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <span class="timeline-year">1993 - 1995</span>
+                    <div class="degree-badge">CERTIFICATE</div>
+                    <h3>St. Augustine's Buttiti P.T.C</h3>
+                    <p>Grade Three Teachers' Certificate<br>
+                    Minister of Environmental Protection and Wildlife Club<br>
+                    Dormitory Captain of St. Mary's Hall</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <span class="timeline-year">1989 - 1992</span>
+                    <div class="degree-badge">UCE</div>
+                    <h3>Simbya Senior School</h3>
+                    <p>Uganda Certificate of Education (UCE)<br>
+                    Ordinary level secondary education</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <span class="timeline-year">1981 - 1987</span>
+                    <div class="degree-badge">PLE</div>
+                    <h3>Kisonko Primary School</h3>
+                    <p>Primary Leaving Examination (PLE) Certificate<br>
+                    Debate Prefect<br>
+                    Foundation of academic journey</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Short Courses Section -->
+        <section class="short-courses">
+            <h2>Professional Development & Short Courses</h2>
+            <div class="course-grid">
+                <div class="course-card">
+                    <h3>Certificate in Public Administration and Management</h3>
+                    <p><strong>Institution:</strong> Makerere University</p>
+                    <p><strong>Year:</strong> 2006</p>
+                </div>
+                <div class="course-card">
+                    <h3>Certificate in Proficiency of Kiswahili</h3>
+                    <p><strong>Institution:</strong> N.T.C Kakoba - Mbarara</p>
+                    <p><strong>Year:</strong> 2002-2004</p>
+                    <p><strong>Leadership:</strong> General Secretary of Bundibugyo/Kasese Students' Association</p>
+                </div>
+                <div class="course-card">
+                    <h3>Two Weeks Cadre Course</h3>
+                    <p><strong>Institution:</strong> St. Augustine's P.T.C</p>
+                    <p><strong>Year:</strong> 1994</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="spacer"></div>
+
+       
+    </div>
+
+    <script>
+        // Simple animation for page elements
+        document.addEventListener('DOMContentLoaded', function() {
+            const items = document.querySelectorAll('.timeline-item, .course-card');
+            
+            // Intersection Observer for animation
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            items.forEach(item => {
+                item.style.opacity = 0;
+                item.style.transition = 'opacity 0.5s ease-in-out';
+                observer.observe(item);
+            });
+        });
+    </script>
+</body>
+</html>
 
     <!-- Enhanced Footer -->
     <footer class="site-footer">
