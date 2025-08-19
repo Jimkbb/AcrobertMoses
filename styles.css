@@ -133,6 +133,7 @@ nav {
     background: url('/familys2.jpgw');
     background-size: cover;
     background-position: center;
+    color: white;
     background-attachment: fixed;
     
     display: flex;
