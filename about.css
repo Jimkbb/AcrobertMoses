@@ -1,0 +1,66 @@
+/* ABOUT PAGE */
+.about-hero {
+background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),
+url('Ambulance.jpg') center/cover no-repeat;
+}
+
+.about-page {
+display: grid;
+gap: 2rem;
+max-width: 1100px;
+margin: auto;
+padding: 3rem 1.5rem;
+}
+
+.about-profile {
+text-align: center;
+}
+
+.about-profile img {
+width: 220px;
+border-radius: 50%;
+border: 5px solid var(--ug-yellow);
+}
+
+.profile-badge {
+margin-top: 1rem;
+display: inline-block;
+background: var(--primary);
+color: white;
+padding: .5rem 1rem;
+border-radius: 20px;
+font-size: .9rem;
+}
+
+.about-card {
+background: white;
+padding: 1.8rem;
+border-radius: 10px;
+box-shadow: 0 5px 15px rgba(0,0,0,.1);
+}
+
+.about-card.highlight {
+border-left: 5px solid var(--primary);
+}
+
+.timeline {
+list-style: none;
+padding: 0;
+}
+
+.timeline li {
+display: flex;
+gap: 1rem;
+margin-bottom: 1rem;
+font-size: .95rem;
+}
+
+.timeline i {
+color: var(--primary);
+font-size: 1.1rem;
+}
+
+.about-cta {
+text-align: center;
+margin-top: 2rem;
+}
