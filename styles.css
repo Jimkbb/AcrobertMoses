@@ -71,23 +71,32 @@ nav {
     padding: 0.5rem;
 }
 
-/* Navigation Menu - Mobile */
+/* Navigation Menu - Mobile (FIXED) */
 .nav-menu {
     position: fixed;
     top: 0;
-    right: -100%;
-    width: 30%;
+    right: -110%; /* hide fully off screen */
+    width: min(85vw, 360px); /* ✅ responsive width for phones */
+    max-width: 100%;
     height: 100vh;
     background: var(--ug-yellow);
     box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+
+    /* IMPORTANT: your menu needs display:flex, otherwise flex-direction doesn't work */
+    display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: stretch;
     justify-content: flex-start;
+
     transition: right 0.3s ease;
     z-index: 1000;
     list-style: none;
-    padding: 5rem 1.5rem 2rem;
+
+    padding: 5rem 1.25rem 2rem;
     margin: 0;
+
+    overflow-y: auto;     /* ✅ if menu is long, it scrolls */
+    overflow-x: hidden;   /* ✅ prevents sideways overflow */
 }
 
 .nav-menu.show {
@@ -95,23 +104,35 @@ nav {
 }
 
 .nav-menu li {
-    margin: 1rem 0;
+    margin: 0.35rem 0;
     width: 100%;
 }
 
+/* FIX: allow long words to wrap and never overflow */
 .nav-menu li a {
     display: block;
-    padding: 0.8rem 0;
-    font-size: 1.1rem;
+    width: 100%;
+    padding: 0.9rem 0.6rem;
+
+    font-size: 1.05rem;
     text-decoration: none;
     color: var(--dark);
     font-weight: 600;
-    transition: color 0.3s;
-    width: 100%;
+    line-height: 1.35;
+
+    /* ✅ THESE 3 LINES SOLVE LONG WORD OVERFLOW */
+    white-space: normal;         /* allow multi-line */
+    overflow-wrap: anywhere;     /* break very long words */
+    word-break: break-word;      /* fallback for older browsers */
+
+    border-radius: 8px;
+    transition: color 0.3s, background 0.3s;
 }
 
-.nav-menu li a:hover {
+.nav-menu li a:hover,
+.nav-menu li a:focus {
     color: var(--primary);
+    background: rgba(0,0,0,0.06);
 }
 
 /* Close Button for Mobile Menu */
@@ -125,6 +146,13 @@ nav {
     color: var(--dark);
     padding: 0.5rem;
     cursor: pointer;
+}
+
+/* OPTIONAL: On larger screens, make the mobile drawer wider */
+@media (min-width: 768px) {
+    .nav-menu {
+        width: min(420px, 90vw);
+    }
 }
 
 /* Hero Section - Mobile Without Gradient */
@@ -727,73 +755,6 @@ h2::after {
     font-size: 1.1rem;
 }
 
-/* ================= ABOUT PAGE (SCOPED) ================= */
-
-.about-page-wrapper .about-hero {
-  background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),
-              url('Ambulance.jpg') center/cover no-repeat;
-}
-
-.about-page-wrapper .about-page {
-  display: grid;
-  gap: 2rem;
-  max-width: 1100px;
-  margin: auto;
-  padding: 3rem 1.5rem;
-}
-
-.about-page-wrapper .about-profile {
-  text-align: center;
-}
-
-.about-page-wrapper .about-profile img {
-  width: 220px;
-  border-radius: 50%;
-  border: 5px solid var(--ug-yellow);
-}
-
-.about-page-wrapper .profile-badge {
-  margin-top: 1rem;
-  display: inline-block;
-  background: var(--primary);
-  color: white;
-  padding: .5rem 1rem;
-  border-radius: 20px;
-  font-size: .9rem;
-}
-
-.about-page-wrapper .about-card {
-  background: white;
-  padding: 1.8rem;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0,0,0,.1);
-}
-
-.about-page-wrapper .about-card.highlight {
-  border-left: 5px solid var(--primary);
-}
-
-.about-page-wrapper .timeline {
-  list-style: none;
-  padding: 0;
-}
-
-.about-page-wrapper .timeline li {
-  display: flex;
-  gap: 1rem;
-  margin-bottom: 1rem;
-  font-size: .95rem;
-}
-
-.about-page-wrapper .timeline i {
-  color: var(--primary);
-  font-size: 1.1rem;
-}
-
-.about-page-wrapper .about-cta {
-  text-align: center;
-  margin-top: 2rem;
-}
 
 /* Contact Section - Mobile */
 .contact-container {
